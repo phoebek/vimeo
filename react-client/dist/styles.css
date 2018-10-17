@@ -16,28 +16,31 @@ header {
   float: right;
 }
 .wrapper {
-  max-width: 1110px;
   margin: 0 auto;
 }
+
 /* Section Component */
 .section, .subsection {
   width: 100%;
   position: relative;
   overflow: auto;
-  margin: 0 15px;
 }
 .section {
-  padding: 120px 0;
+  padding: 120px 10%;
 }
 
 .section-col {
   display: flex;
   float: left;
   width: 50%; 
-  padding: 0 15px;
+  margin: 0 15px;
 }
 .section-img {
   vertical-align: middle;
+}
+
+.section-img > img {
+  width: 100%;
 }
 
 .section::before, .section::after {
@@ -61,6 +64,9 @@ header {
 }
 .section:nth-of-type(even)::before {
   background-color: gray;
+}
+
+.section:nth-of-type(even) {
   color: white;
 }
 
@@ -70,7 +76,7 @@ header {
   margin: 30px 0;
 }
 
-.subsection:nth-of-type(even) {
+.alternate:nth-of-type(odd) {
   flex-direction: row-reverse;
 }
 
@@ -78,14 +84,97 @@ header {
   display: inline-block;
 }
 
+/* Carousel */
+.carousel 
+{
+  height: 600px;
+  position: relative;
+}
+#image-slide-wrapper {
+  overflow: hidden;
+}
 
+#image-slide {
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  opacity: .8;
+  filter: blur(20px) grayscale(20%) brightness(.7);
+  margin: -5px -10px -10px -5px;
+
+}
+
+.text-content {
+  position: absolute;
+  max-width: 30%;
+  bottom: 50%;
+  left: 50%;
+  color: white;
+}
+
+.image-card {
+  position: absolute;
+  bottom: 30%;
+  left: 30%;
+}
+
+.buttons-wrapper {
+  position: absolute;
+  
+}
+
+.button {
+  position:absolute;
+  height: 40px;
+  width:90px;
+  border-radius: 4px;
+  color:white;
+  text-align: center;
+}
+
+.button > p {
+  padding: 10px 0;
+}
+
+#watch-button {
+  border: 1px solid white;
+  left: 100px;
+}
 /* Use a media query to add a breakpoint at 800px: */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1280px) {
+  .subsection {
+    display: inline-block;
+    flex-direction: row-reverse;
+    margin: 30px 0;
+  }
   .section-col {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    margin: 0;
+  }
+
+  .image-card {
+    bottom: 40%;
+    left: 50%;
+    margin-left: -90px;
+  }
+  .text-content {
+    max-width: 50%;
+    bottom: 20%;
+    left: 30%;
   }
 }
 
+@media screen and (max-width: 800px) {
+  .section {
+    padding: 120px 5%;
+  }
+  .subsection {
+    display: inline-block;
+  }
+  .section-col,  {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
 
 footer {
   display: block;

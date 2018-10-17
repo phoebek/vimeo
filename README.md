@@ -1,50 +1,32 @@
-# Start building your own website
-This is a repository that I created to help others develop their websites in React.
-
-
-
 ## Tech stack
 * [React](https://github.com/facebook/react) & [React Router 4](https://github.com/ReactTraining/react-router)
 * [Node](https://github.com/nodejs) & [Express](https://github.com/expressjs/express)
 
 
-
 ## Getting started
+Clone the directory:
+```
+git clone https://github.com/phoebek/vimeo.git
+```
 
 ### Setting up the basic environment in Node:
-You will need to install Node globally if you do not have it installed already on your local drive:
+If you don't already have Node, install it with:
 ```
 sudo npm install -g
 ```
-Installing Nodemon is also highly recommended as it watches for any changes that are saved and will automatically restart your application with the updated code base.
-```
-npm install nodemon -g 
-```
 
 ### Installing dependencies
-The prescribed dependencies needed for building a website are listed in the `package.json` file of this repository.
-Once this repo is cloned to your local drive, from within the root directory:
+From within the root directory, install dependencies:
 ```
 npm install
 ```
+### Run the app locally
+To launch the web app locally on port 8080:
+```
+node server/index.js
+```
+ Go to http://localhost:8080/ in your web brower to view
 
-
-
-## Additional information
-More granular instructions as a guide to building a website are included in my [blog post](https://medium.com/@Preda/getting-started-on-building-a-personal-website-with-react-b44ee93b1710), if needed.
-
-
-### The steps to create a website include:
-1. File architecture
-2. Setting up the basic environment in Node
-3. Installing the React framework
-4. Creating a webpack and configuration
-5. Building the basic front-end components
-6. Styling and CSS
-7. Viewing on local host
-8. Deploying on Heroku
-
-
-
-## Author
-Preda A
+## Starter code credit:
+[Preda A](https://medium.com/@Preda/getting-started-on-building-a-personal-website-with-react-b44ee93b1710), if needed.
+[Will Soares](https://dev.to/willamesoares/how-to-build-an-image-carousel-with-react--24na)
